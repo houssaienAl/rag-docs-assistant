@@ -1,0 +1,30 @@
+services:
+  postgres:
+    image: pgvector/pgvector:pg16
+    environment: {POSTGRES_USER: rag, POSTGRES_PASSWORD: rag, POSTGRES_DB: rag}  # local demo only
+    volumes: ["pgdata:/var/lib/postgresql/data"]
+    healthcheck:
+      test: ["CMD-SHELL", "pg_isready -U rag -d rag"]
+      interval: 5s
+      retries: 10
+
+  ollama:
+    image: ollama/ollama
+    volumes: ["ollama:/root/.ollama"]   # models are downloaded once and kept
+
+  app:
+    build: .
+    depends_on:
+      postgres: {condition: service_healthy}
+      ollama: {condition: service_started}
+    environment:
+      DATABASE_URL: postgresql://rag:rag@postgres:5432/rag
+      OLLAMA_URL: http://ollama:11434
+      LLM_MODEL: ${LLM_MODEL:-llama3.2:1b}
+      EMBED_MODEL: ${EMBED_MODEL:-all-minilm}
+    ports: ["8501:8501"]
+    volumes: ["./docs:/app/docs", "./eval:/app/eval"]
+
+volumes:
+  pgdata:
+  ollama:

@@ -1,0 +1,20 @@
+[
+  {"question": "How many days of paid annual leave do full-time employees get?", "source": "leave_policy.md", "keyword": "27"},
+  {"question": "How many unused leave days can be carried over to the next year?", "source": "leave_policy.md", "keyword": "6"},
+  {"question": "From which day of sickness is a medical certificate required?", "source": "leave_policy.md", "keyword": "third"},
+  {"question": "How many weeks of parental leave does the secondary caregiver get?", "source": "leave_policy.md", "keyword": "5"},
+  {"question": "Which day of the week is the shared on-site day?", "source": "leave_policy.md", "keyword": "Tuesday"},
+  {"question": "Within how many days must an expense claim be submitted?", "source": "expenses.md", "keyword": "45"},
+  {"question": "What is the daily meal allowance when travelling for work?", "source": "expenses.md", "keyword": "38"},
+  {"question": "What is the hotel limit per night in Paris?", "source": "expenses.md", "keyword": "190"},
+  {"question": "How much is the annual training budget per employee?", "source": "expenses.md", "keyword": "1,200"},
+  {"question": "When is business class allowed for flights?", "source": "expenses.md", "keyword": "7"},
+  {"question": "What is the minimum password length?", "source": "it_security.md", "keyword": "14"},
+  {"question": "How quickly must a lost or stolen laptop be reported?", "source": "it_security.md", "keyword": "2 hours"},
+  {"question": "Where must restricted data such as payroll be stored?", "source": "it_security.md", "keyword": "Strongroom"},
+  {"question": "After how many minutes of inactivity do laptops lock?", "source": "it_security.md", "keyword": "5"},
+  {"question": "How long is the probation period?", "source": "onboarding.md", "keyword": "4 months"},
+  {"question": "For how long is a new hire paired with an onboarding buddy?", "source": "onboarding.md", "keyword": "60"},
+  {"question": "When are deployments frozen?", "source": "onboarding.md", "keyword": "Friday"},
+  {"question": "In which months are performance reviews held?", "source": "onboarding.md", "keyword": "June"}
+]
